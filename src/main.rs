@@ -1,20 +1,12 @@
-pub mod battle;
-use battle::Character;
+mod battle;
+mod characters;
+
+use characters::enemies;
+use characters::heroes;
 
 fn main() {
-    let mut player = Character {
-        name: String::from("Edward"),
-        health: 30,
-        strength: 6,
-        armor: 12,
-    };
-
-    let mut enemy = Character {
-        name: String::from("Shit Knight"),
-        health: 30,
-        strength: 7,
-        armor: 12,
-    };
+    let mut player = heroes::player();
+    let mut enemy = enemies::shit_knight();
 
     battle::fight(&mut player, &mut enemy);
 }
