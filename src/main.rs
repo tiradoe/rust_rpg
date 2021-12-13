@@ -1,10 +1,13 @@
 mod battle;
 mod characters;
-use characters::*;
+mod dungeons;
+
+use dungeons::*;
 
 fn main() {
-    let mut player = character::new();
-    let mut enemy = enemies::squirrel();
+    let mut player = characters::character::new();
 
-    battle::fight(&mut player, &mut enemy);
+    player = level1::start(player);
+
+    println!("\n{} has {} health.", player.name, player.health);
 }
