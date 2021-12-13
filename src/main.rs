@@ -1,12 +1,10 @@
 mod battle;
 mod characters;
-
-use characters::enemies;
-use characters::heroes;
+use characters::*;
 
 fn main() {
-    let mut player = heroes::player();
-    let mut enemy = enemies::shit_knight();
+    let mut player = character::new();
+    let mut enemy = enemies::squirrel();
 
     battle::fight(&mut player, &mut enemy);
 }

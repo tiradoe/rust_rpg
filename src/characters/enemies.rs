@@ -1,10 +1,11 @@
 use crate::characters::character::Character;
 
-pub fn shit_knight() -> Character {
+pub fn squirrel() -> Character {
     Character {
-        name: String::from("Shit Knight"),
+        name: String::from("Squirrel"),
+        armor: 12,
+        class: String::from("animal"),
         health: 20,
         strength: 8,
-        armor: 12,
     }
 }
